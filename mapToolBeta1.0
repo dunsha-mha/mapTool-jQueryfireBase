@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style>
+			#map {
+				height: 400px;
+				width: 100%;
+			}
+		</style>
+		<!--Calls jquery-->
+		<script src="add maps source"></script>
+	</head>
+
+	<body>
+		<h1 align="center">Agero Geolocation Tool - Beta Version 1.0</h1>
+		<div id="map"></div>
+		<script>
+			function initMap(){
+				var lowell = {lat: add lat, lng: -add long};
+				var map = new google.maps.Map(document.getElementById('map'),
+				{
+					zoom: 7,
+					center: lowell
+				});
+				var marker = new google.maps.Marker({
+
+					position: lowell,
+					map: map
+				});
+			}
+		</script>
+
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+
+		<script>
+  		// Initialize Firebase
+  			var config = {
+    		apiKey: "add api key",
+    		authDomain: "add firebase auth domain",
+    		databaseURL: "add firebase data URL",
+    		projectId: "add project ID",
+    		storageBucket: "add project storage bucket",
+    		messagingSenderId: "add messaging Sender Id"
+  			};
+			firebase.initializeApp(config);
+		</script>
+
+		<script async defer
+		src="add maps api source
+		key=add maps initializer api key">
+
+
+
+		</script>
+		<!--
+			Pending:
+			var vendorID: add query request for query request.
+			var username: add query request for username or device ID.
+			var dtstart: add query request for date start.
+			var dtend: add query for date end.
+
+
+		<script>
+		var startDate = 14200000000;
+		var endDate = 14300000000;
+
+ref.orderByChild("date").startAt(startDate).endAt(endDate)
+  .on("child_added", function(snapshot){
+    console.log("got the data!", snapshot);
+  });
+		</script>
+			-->
+		<h3 align="center">To search geolocation please fill out the fields below.</h3>
+		<h4 align="left">Vendor ID:</h4><input type="text" id="vendorid"/>
+		<h4 align="left">Username:</h4><input type="text" id="username"/>
+		<h4 align="left">Date Start:</h4><input type="" value=""/>
+		<h4 align="left">Date End:</h4><input type="" value=""/></br></br>
+		<button>Search:</button>
+
+		<!--
+			Pending:
+			var vendorID
+
+
+
+
+
+
+	</body>
+</html>
